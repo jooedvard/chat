@@ -1,0 +1,16 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "First chat app Socket.io",
+  "main": "chat.js",
+  "scripts": {
+    "watch": "nodemon"
+  },
+  "author": "Joo Edvard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1"
+  }
+}

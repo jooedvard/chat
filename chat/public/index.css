@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  min-height: 100vh;
+}
+body {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  
+  min-width: 400px;
+}
+.main {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  overflow: hidden;
+ 
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.input-container img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.emoji-container{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    background-color: white;
+    padding: .75rem;
+    border-radius: 25px;
+    width: fit-content;
+    z-index: 500;
+    position: absolute;
+    bottom: 6vh;
+    right: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: .5rem;
+}
+.emoji{
+  cursor: pointer;
+}
+.emoji:hover{
+  background-color: dodgerblue;
+}
+.emojis {
+  position: relative;
+  right: 3.25rem;
+  border: none;
+  background: none;
+  padding: 0.25rem;
+  border-left: 1px solid #ced4da;
+}
+.messages {
+  background-color: rgb(226, 226, 226);
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.new-message {
+  padding-left: 0.75rem;
+  padding-top: 0.25rem;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 0.25rem;
+}
+.new-message img {
+  border-radius: 100%;
+}
+.message-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  background-color: white;
+  padding: 0.25rem;
+  width: calc(100% + 17px);
+}
+.timestamp {
+  font-weight: bolder;
+  padding-right: 1rem;
+}
+.info,
+.info2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: dodgerblue;
+  padding: 0.5rem;
+  border-radius: 25px;
+  color: white;
+  position: absolute;
+  top: 0.5%;
+}
+.info2 {
+  background-color: rgb(207, 54, 54);
+}
+.user-text {
+  display: flex;
+  flex-direction: column;
+}
+.user-in-chat {
+  font-style: italic;
+  font-size: smaller;
+  color: grey;
+}
+.info img,
+.new-message img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.user-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+}
+.user-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.avatars img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.avatars{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.choose-avatar{
+  text-align: center;
+  padding: 1rem;
+}
+.refresh-avatars{
+    display: flex;
+    background-color: unset;
+    border: none;
+    margin: auto;
+    margin-top: 1rem;
+    
+}
+.refresh-avatars img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.selected-avatar{
+  border: 5px solid dodgerblue;
+}
+.error{
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+  color: rgb(252, 65, 65);
+  display: none;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+.nick{
+  font-size: larger;
+  font-weight: bolder;
+}
+.choose-file{
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.choose-file p{
+  text-align: center;
+  padding: .5rem;
+  font-weight: bolder;
+}
+.preview{
+  border:  5px dotted gainsboro;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  border-radius: 10px;
+  max-width: 200px;
+  flex-direction: column;
+}
+.preview img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+.online-container{
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.online{
+  padding: 1rem;
+}
+.online-icon{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid yellowgreen;
+  background-color: yellowgreen;
+}
